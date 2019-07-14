@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.alc_button:
-                Toast.makeText(getApplicationContext(),"Fetching Andela's about page",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Fetching Andela's about page",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, about_activity.class));
                 break;
             case R.id.profile_btn:
