@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.SslErrorHandler;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -30,7 +31,9 @@ public class about_activity extends AppCompatActivity {
 
 
             }
-        }); // to compel the page to load in-app
+        });
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl(URL);
         progressBar.setVisibility(View.VISIBLE);
 
